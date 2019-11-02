@@ -18,11 +18,9 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(i);
     }
 
-
     public void open_lugares(View v){
 Intent i = new Intent( this, Lugares.class);
 this.startActivity(i);
 }
-
 
 }

@@ -10,6 +10,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseHolder.init();
         setContentView(R.layout.activity_splash_screen);
         this.getWindow().setStatusBarColor(this.getResources().getColor(R.color.indigo));
         final SplashScreen context = this;
