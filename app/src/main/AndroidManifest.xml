@@ -14,9 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Historia"></activity>
+        <activity android:name=".Museo"></activity>
+        <activity android:name=".Historia" />
         <activity android:name=".ScanActivity" />
-
         <activity android:name=".Eventos" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
