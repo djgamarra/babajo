@@ -1,8 +1,4 @@
 <resources>
-<<<<<<< HEAD
     <string name="app_name">Barrio Abajo</string>
-=======
-    <string name="app_name">carddashboard</string>
     <string name="title_activity_lugares">Map</string>
->>>>>>> f634d723d7b737deaef2dc0aee7294d3af9048d0
 </resources>

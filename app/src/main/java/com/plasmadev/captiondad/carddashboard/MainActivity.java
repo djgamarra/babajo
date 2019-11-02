@@ -17,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, Main2Activity.class);
         this.startActivity(i);
     }
-    public void open_lugares(){
-Intent i = new Intent( this, Lugares.class);
 
-}
+    public void open_lugares() {
+        Intent i = new Intent(this, Lugares.class);
+
+    }
 
 
 }
