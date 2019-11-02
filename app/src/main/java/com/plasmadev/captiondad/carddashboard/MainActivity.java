@@ -2,7 +2,9 @@ package com.plasmadev.captiondad.carddashboard;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,11 +27,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void open_qr(View v) {
         Intent i = new Intent(this, ScanActivity.class);
-        this.startActivity(i);
+        startActivityForResult(i, 1);
     }
 
     public void open_historia(View v) {
         Intent i = new Intent(this, Historia.class);
         this.startActivity(i);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+        Log.d("hola", "hola");
+        Log.d(data.getStringExtra("KEY_QR_CODE"), "" + requestCode);
     }
 }
