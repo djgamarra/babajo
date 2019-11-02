@@ -14,7 +14,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         this.getWindow().setStatusBarColor(this.getResources().getColor(R.color.indigo));
         final SplashScreen context = this;
-        final int duration = 400;
+        final int duration = 5000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
