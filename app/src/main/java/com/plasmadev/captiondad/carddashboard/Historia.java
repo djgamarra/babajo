@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.firebase.firestore.DocumentSnapshot;
+
 public class Historia extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,14 @@ public class Historia extends AppCompatActivity {
 
     public void open_museo(View v) {
         Intent i = new Intent(this, Museo.class);
+        DocumentSnapshot doc = FirebaseHolder.historias.get(0);
+
+        i.putExtra("img", doc.getString("imagen"));
+        i.putExtra("titulo", doc.getString("nombre"));
+        i.putExtra("fecha", doc.getString("ubicacion"));
+        i.putExtra("detalle", doc.getString("historia"));
+        i.putExtra("contacto", doc.getString("contacto") == null ? "---" : doc.getString("contacto"));
+
         this.startActivity(i);
     }
 }

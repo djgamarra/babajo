@@ -12,6 +12,7 @@ import java.util.List;
 
 public class FirebaseHolder {
     public static List<DocumentSnapshot> eventos = null;
+    public static List<DocumentSnapshot> historias = null;
 
     public static FirebaseFirestore getInstance() {
         return FirebaseFirestore.getInstance();
@@ -23,6 +24,14 @@ public class FirebaseHolder {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     eventos = task.getResult().getDocuments();
+                }
+            }
+        });
+        getInstance().collection("historias").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    historias = task.getResult().getDocuments();
                 }
             }
         });
