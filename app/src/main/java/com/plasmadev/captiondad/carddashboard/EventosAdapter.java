@@ -13,8 +13,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import java.util.List;
 
 public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosViewHolder> {
-    private List<DocumentSnapshot> r;
     private static int[] colors = new int[4];
+    private List<DocumentSnapshot> r;
 
     public EventosAdapter(List<DocumentSnapshot> r) {
         this.r = r;
