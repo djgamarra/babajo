@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/circular_std_medium"
-                android:text="Barrio Abajo"
+                android:text="Bajo e' la bonga"
                 android:textColor="@color/black"
                 android:textSize="24dp" />
 
