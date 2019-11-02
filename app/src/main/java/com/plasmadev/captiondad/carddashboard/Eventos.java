@@ -17,6 +17,6 @@ public class Eventos extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         rv.setLayoutManager(layoutManager);
 
-        rv.setAdapter(new EventosAdapter(FirebaseHolder.eventos));
+        rv.setAdapter(new EventosAdapter(FirebaseHolder.eventos, this));
     }
 }

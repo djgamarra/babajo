@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-        Log.d("hola", "hola");
-        Log.d(data.getStringExtra("KEY_QR_CODE"), "" + requestCode);
+        if (requestCode == 1 && data != null) {
+            Log.d(data.getStringExtra("KEY_QR_CODE"), "" + requestCode);
+        }
     }
 }
