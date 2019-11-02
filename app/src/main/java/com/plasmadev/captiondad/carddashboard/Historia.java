@@ -17,7 +17,7 @@ public class Historia extends AppCompatActivity {
 
     public void open_museo(View v) {
         Intent i = new Intent(this, Museo.class);
-        DocumentSnapshot doc = FirebaseHolder.historias.get(1);
+        DocumentSnapshot doc = FirebaseHolder.historias.get(0);
 
         i.putExtra("img", doc.getString("imagen"));
         i.putExtra("titulo", doc.getString("nombre"));
@@ -30,7 +30,7 @@ public class Historia extends AppCompatActivity {
 
     public void open_aduanas(View v) {
         Intent i = new Intent(this, Museo.class);
-        DocumentSnapshot doc = FirebaseHolder.historias.get(0);
+        DocumentSnapshot doc = FirebaseHolder.historias.get(1);
 
         i.putExtra("img", doc.getString("imagen"));
         i.putExtra("titulo", doc.getString("nombre"));
