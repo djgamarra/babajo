@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, Historia.class);
         this.startActivity(i);
     }
+    public void open_ayuda(View v) {
+        Intent i = new Intent(this, Ayuda.class);
+        this.startActivity(i);
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
