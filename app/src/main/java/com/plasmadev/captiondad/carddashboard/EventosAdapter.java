@@ -74,6 +74,8 @@ public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosV
             i.putExtra("titulo", doc.getString("nombre"));
             i.putExtra("fecha", doc.getString("fecha"));
             i.putExtra("detalle", doc.getString("detalle"));
+            i.putExtra("telefono", doc.getString("telefono"));
+            i.putExtra("email", doc.getString("email"));
             i.putExtra("contacto", doc.getString("contacto") == null ? "---" : doc.getString("contacto"));
             this.context.startActivity(i);
         }

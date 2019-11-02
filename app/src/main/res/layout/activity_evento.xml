@@ -55,11 +55,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
 
-                <TextView
-                    android:id="@+id/eventoContacto"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/call_answer" />
+
+                    <TextView
+                        android:id="@+id/eventoTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="llamar"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/at" />
+
+                    <TextView
+                        android:id="@+id/eventoEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="mail_to"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 

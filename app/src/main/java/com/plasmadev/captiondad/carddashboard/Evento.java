@@ -3,9 +3,11 @@ package com.plasmadev.captiondad.carddashboard;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,7 +31,8 @@ public class Evento extends AppCompatActivity {
         ((TextView) findViewById(R.id.eventoTitulo)).setText(extras.getStringExtra("titulo"));
         ((TextView) findViewById(R.id.eventoFecha)).setText(extras.getStringExtra("fecha"));
         ((TextView) findViewById(R.id.eventoDetalle)).setText(extras.getStringExtra("detalle"));
-        ((TextView) findViewById(R.id.eventoContacto)).setText(extras.getStringExtra("contacto"));
+        ((TextView) findViewById(R.id.eventoTelefono)).setText(extras.getStringExtra("telefono"));
+        ((TextView) findViewById(R.id.eventoEmail)).setText(extras.getStringExtra("email"));
     }
 
     public Bitmap getBitmapFromURL(String imageUrl) {
@@ -45,5 +48,19 @@ public class Evento extends AppCompatActivity {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public void llamar(View v) {
+        Intent extras = this.getIntent();
+        String phone = extras.getStringExtra("telefono");
+        if (phone != null) {
+            Uri u = Uri.parse("tel:" + phone);
+            Intent i = new Intent(Intent.ACTION_DIAL, u);
+            this.startActivity(i);
+        }
+    }
+
+    public void mail_to(View v) {
+        
     }
 }
