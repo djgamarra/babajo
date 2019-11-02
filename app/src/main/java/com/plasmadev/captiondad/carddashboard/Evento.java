@@ -61,6 +61,12 @@ public class Evento extends AppCompatActivity {
     }
 
     public void mail_to(View v) {
-        
+        Intent extras = this.getIntent();
+        String email = extras.getStringExtra("email");
+        if (email != null) {
+            Uri u = Uri.parse("tel:" + email);
+            Intent i = new Intent(Intent.CATEGORY_APP_EMAIL, u);
+            this.startActivity(i);
+        }
     }
 }
