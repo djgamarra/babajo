@@ -22,7 +22,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
                 android:text="Barrio Abajo"
                 android:textColor="#5E5E5E"
                 android:textSize="24dp" />
@@ -41,8 +40,7 @@
         <TextView
             android:layout_width="323dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_regular"
-            android:text="Informacion turistica de Barrio Abajo"
+            android:text="Conociendo la cultura local"
             android:textColor="#5E5E5E"
             android:textSize="18dp" />
 
@@ -79,8 +77,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_mediumitalic"
-                            android:text="Good Mrning"
+                            android:text="Good Morning"
                             android:textColor="#ffff"
                             android:textSize="18dp" />
 
@@ -108,7 +105,6 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_medium"
                             android:text="Android Developer"
                             android:textColor="#ffff"
                             android:textSize="24dp" />
@@ -121,7 +117,6 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="21 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -153,7 +148,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -177,7 +171,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -201,7 +194,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -225,7 +217,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -249,7 +240,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -273,7 +263,6 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/roboto_medium"
                                 android:text="20 C"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
@@ -297,18 +286,18 @@
                 android:orientation="horizontal">
 
                 <View
-                    android:layout_width="160dp"
-                    android:layout_height="2dp"
+                    android:layout_width="149dp"
+                    android:layout_height="4dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="8dp"
                     android:background="#7a8b8b8b"
                     android:onClick="open"></View>
 
                 <TextView
-                    android:layout_width="203dp"
+                    android:layout_width="217dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text=" Ver todos los eventos >"
+                    android:onClick="open"
+                    android:text=" Ver todos los eventos > "
                     android:textAlignment="textEnd"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
@@ -324,9 +313,11 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
+                    android:backgroundTint="#009432"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:layout_margin="10dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
 
@@ -338,9 +329,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Lugares "
-                            android:textColor="#5E5E5E"
+                            android:text="Lugares"
+                            android:textColor="#fff"
                             android:textSize="18dp" />
 
                         <ImageView
@@ -355,9 +345,10 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:backgroundTint="#3c40c6"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
-                    android:layout_marginLeft="18dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
@@ -370,9 +361,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
                             android:text="Foro"
-                            android:textColor="#5E5E5E"
+                            android:textColor="#FFFFFF"
                             android:textSize="18dp" />
 
                         <ImageView
@@ -396,9 +386,11 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
+                    android:backgroundTint="#EA2027"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
+                    android:layout_margin="10dp"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
 
@@ -410,9 +402,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
                             android:text="Historia"
-                            android:textColor="#5E5E5E"
+                            android:textColor="#ffffff"
                             android:textSize="18dp" />
 
                         <ImageView
@@ -427,9 +418,11 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+
+                    android:backgroundTint="#ffd32a"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
-                    android:layout_marginLeft="18dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
@@ -442,9 +435,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
                             android:text="Escanear QR"
-                            android:textColor="#5E5E5E"
+                            android:textColor="#ffffff"
                             android:textSize="18dp" />
 
                         <ImageView
@@ -469,10 +461,12 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
+                    android:backgroundTint="#8854d0"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
+                    android:layout_margin="10dp"
                     app:cardElevation="2dp">
 
                     <RelativeLayout
@@ -483,9 +477,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text=""
-                            android:textColor="#5E5E5E"
+                            android:text="Folclor"
+                            android:textColor="#ffffff"
                             android:textSize="18dp" />
 
                         <ImageView
@@ -500,9 +493,10 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:backgroundTint="#fa8231"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
-                    android:layout_marginLeft="18dp"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
@@ -515,9 +509,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/roboto_bold"
-                            android:text="Flight"
-                            android:textColor="#5E5E5E"
+                            android:text="Ayuda"
+                            android:textColor="#ffffff"
                             android:textSize="18dp" />
 
                         <ImageView
