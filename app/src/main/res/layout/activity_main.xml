@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    style="@style/AppTheme"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -36,7 +37,7 @@
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
-        android:text="Informacion turistica de"
+        android:text="Informacion turistica de Barrio Abajo"
         android:textColor="#5E5E5E"
         android:textSize="18dp" />
 
@@ -323,7 +324,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Walking"
+                    android:text="Lugares "
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
@@ -355,7 +356,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Cycling"
+                    android:text="Foro"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
@@ -395,7 +396,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Driving"
+                    android:text="Historia"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
@@ -427,7 +428,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Train"
+                    android:text="Escanear QR"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
@@ -468,7 +469,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Climbing"
+                    android:text=""
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
