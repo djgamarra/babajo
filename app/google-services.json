@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "334523630462",
+    "firebase_url": "https://babajo-eea63.firebaseio.com",
+    "project_id": "babajo-eea63",
+    "storage_bucket": "babajo-eea63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334523630462:android:a859cced6106e82613692f",
+        "android_client_info": {
+          "package_name": "com.plasmadev.captiondad.carddashboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334523630462-lkvaudvve8gvekphe2a0ejdr1uam32e0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plasmadev.captiondad.carddashboard",
+            "certificate_hash": "d50b89f81b0ef10923fac9253b833641290b2663"
+          }
+        },
+        {
+          "client_id": "334523630462-ksg1d80aogr4t1e1l55qr0mftistb7pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARkYtneitJ2IQ-IbqCT830-up9XHVcXqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334523630462-ksg1d80aogr4t1e1l55qr0mftistb7pn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
