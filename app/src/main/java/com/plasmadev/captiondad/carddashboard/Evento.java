@@ -31,8 +31,8 @@ public class Evento extends AppCompatActivity {
         ((TextView) findViewById(R.id.eventoTitulo)).setText(extras.getStringExtra("titulo"));
         ((TextView) findViewById(R.id.eventoFecha)).setText(extras.getStringExtra("fecha"));
         ((TextView) findViewById(R.id.eventoDetalle)).setText(extras.getStringExtra("detalle"));
-        ((TextView) findViewById(R.id.eventoTelefono)).setText(extras.getStringExtra("telefono"));
-        ((TextView) findViewById(R.id.eventoEmail)).setText(extras.getStringExtra("email"));
+        ((TextView) findViewById(R.id.eventoTelefono)).setText(extras.getStringExtra("telefono") == null ? "---" : extras.getStringExtra("telefono"));
+        ((TextView) findViewById(R.id.eventoEmail)).setText(extras.getStringExtra("email") == null ? "---" : extras.getStringExtra("email"));
     }
 
     public Bitmap getBitmapFromURL(String imageUrl) {
@@ -64,9 +64,13 @@ public class Evento extends AppCompatActivity {
         Intent extras = this.getIntent();
         String email = extras.getStringExtra("email");
         if (email != null) {
-            Uri u = Uri.parse("tel:" + email);
-            Intent i = new Intent(Intent.CATEGORY_APP_EMAIL, u);
-            this.startActivity(i);
+            Intent i = new Intent(Intent.ACTION_SENDTO);
+            i.setData(Uri.parse("mailto:"));
+            i.putExtra(Intent.EXTRA_EMAIL, email);
+            i.putExtra(Intent.EXTRA_SUBJECT, "");
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            }
         }
     }
 }
