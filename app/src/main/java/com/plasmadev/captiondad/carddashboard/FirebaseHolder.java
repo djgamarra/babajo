@@ -4,11 +4,14 @@ import android.support.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.List;
+
 public class FirebaseHolder {
-    public static QuerySnapshot eventos = null;
+    public static List<DocumentSnapshot> eventos = null;
 
     public static FirebaseFirestore getInstance() {
         return FirebaseFirestore.getInstance();
@@ -19,7 +22,7 @@ public class FirebaseHolder {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
-                    eventos = task.getResult();
+                    eventos = task.getResult().getDocuments();
                 }
             }
         });
