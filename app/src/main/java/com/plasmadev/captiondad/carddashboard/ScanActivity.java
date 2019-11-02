@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.zxing.Result;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -22,10 +23,17 @@ public class ScanActivity extends AppCompatActivity implements ZXingScannerView.
 
     @Override
     public void handleResult(Result result) {
-        Log.d("r", result.getText());
-        Intent intent = new Intent();
-        intent.putExtra("KEY_QR_CODE", result.getText());
-        setResult(1, intent);
-        finish();
+
+
+        Intent i = new Intent(this, Museo.class);
+        DocumentSnapshot doc = FirebaseHolder.historias.get(0);
+
+        i.putExtra("img", doc.getString("imagen"));
+        i.putExtra("titulo", doc.getString("nombre"));
+        i.putExtra("fecha", doc.getString("ubicacion"));
+        i.putExtra("detalle", doc.getString("historia"));
+        i.putExtra("contacto", doc.getString("contacto") == null ? "---" : doc.getString("contacto"));
+
+        this.startActivity(i);
     }
 }
