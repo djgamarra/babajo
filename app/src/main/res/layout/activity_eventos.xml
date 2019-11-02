@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".Eventos">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Todos los eventos"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/eventosRV"

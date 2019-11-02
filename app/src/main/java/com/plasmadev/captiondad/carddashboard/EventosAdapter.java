@@ -1,5 +1,6 @@
 package com.plasmadev.captiondad.carddashboard;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import java.util.List;
 
 public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosViewHolder> {
     private List<DocumentSnapshot> r;
+    private static int[] colors = new int[4];
 
     public EventosAdapter(List<DocumentSnapshot> r) {
         this.r = r;
@@ -21,13 +23,20 @@ public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosV
     @NonNull
     @Override
     public EventosAdapter.EventosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.evento, parent, false);
+        Context context = parent.getContext();
+        colors = new int[]{
+                context.getResources().getColor(R.color.yellow),
+                context.getResources().getColor(R.color.indigo),
+                context.getResources().getColor(R.color.colorAccent),
+                context.getResources().getColor(R.color.colorPrimary),
+        };
+        View v = LayoutInflater.from(context).inflate(R.layout.evento, parent, false);
         return new EventosViewHolder(v, this.r.get(i));
     }
 
     @Override
     public void onBindViewHolder(@NonNull EventosViewHolder eventosViewHolder, int i) {
-
+        eventosViewHolder.setData(this.r.get(i));
     }
 
     @Override
@@ -48,6 +57,7 @@ public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosV
         public void setData(DocumentSnapshot d) {
             this.eventoTitulo.setText(d.getString("nombre"));
             this.eventoFecha.setText(d.getString("fecha"));
+            this.eventoFecha.setTextColor(colors[(int) (Math.random() * colors.length)]);
         }
     }
 }
