@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void open(View v) {
-        Intent i = new Intent(this, Main2Activity.class);
+        Intent i = new Intent(this, Eventos.class);
         this.startActivity(i);
     }
 
