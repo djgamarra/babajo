@@ -287,21 +287,11 @@
                 android:orientation="horizontal">
 
                 <View
-                    android:layout_width="149dp"
+                    android:layout_width="match_parent"
                     android:layout_height="4dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="8dp"
-                    android:background="#7a8b8b8b"
-                    android:onClick="open"></View>
-
-                <TextView
-                    android:layout_width="217dp"
-                    android:layout_height="wrap_content"
-                    android:onClick="open"
-                    android:text=" Ver todos los eventos > "
-                    android:textAlignment="textEnd"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
+                    android:layout_margin="8dp"
+                    android:background="#7a8b8b8b"></View>
 
 
             </LinearLayout>
@@ -364,7 +354,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Foro"
+                            android:text="Muro"
                             android:textColor="#FFFFFF"
                             android:textSize="20dp" />
 
@@ -395,7 +385,7 @@
                     android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#EA2027"
+                    android:backgroundTint="#8c7ae6"
                     android:onClick="open_historia"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
@@ -478,7 +468,8 @@
                     android:layout_weight="1"
                     android:backgroundTint="#8854d0"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="2dp">
+                    app:cardElevation="2dp"
+                    android:onClick="open">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -488,7 +479,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Folclor"
+                            android:text="Eventos"
                             android:textColor="#ffffff"
                             android:textSize="20dp" />
 
@@ -508,7 +499,8 @@
                     android:layout_height="120dp"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:backgroundTint="#fa8231"
+                    android:backgroundTint="
+                #EA2027"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
 
