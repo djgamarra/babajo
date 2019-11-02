@@ -12,7 +12,7 @@ import java.util.List;
 public class EventAdapter extends FragmentStatePagerAdapter {
     private List<DocumentSnapshot> data;
 
-    public EventAdapter(FragmentManager fm, List<DocumentSnapshot> data) {
+    EventAdapter(FragmentManager fm, List<DocumentSnapshot> data) {
         super(fm);
         this.data = data;
     }
@@ -22,10 +22,12 @@ public class EventAdapter extends FragmentStatePagerAdapter {
         EventFragment frag = new EventFragment();
         Bundle b = new Bundle();
         DocumentSnapshot doc = this.data.get(position);
-        b.putString("fecha", doc.getString("fecha"));
-        b.putString("titulo", doc.getString("nombre"));
-        b.putString("detalle", doc.getString("detalle"));
         b.putString("imagen", doc.getString("imagen"));
+        b.putString("titulo", doc.getString("nombre"));
+        b.putString("fecha", doc.getString("fecha"));
+        b.putString("detalle", doc.getString("detalle"));
+        b.putString("telefono", doc.getString("telefono"));
+        b.putString("email", doc.getString("email"));
         frag.setArguments(b);
         return frag;
     }

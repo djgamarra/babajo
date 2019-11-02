@@ -1,24 +1,15 @@
 package com.plasmadev.captiondad.carddashboard;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-
-public class EventFragment extends Fragment {
-    private String titulo, fecha, detalle;
+public class EventFragment extends Fragment implements View.OnClickListener {
 
     public EventFragment() {
     }
@@ -27,31 +18,24 @@ public class EventFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_event, container, false);
-        this.fecha = getArguments().getString("fecha");
-        this.titulo = getArguments().getString("titulo");
-        this.detalle = getArguments().getString("detalle");
+        v.setOnClickListener(this);
+        String fecha = getArguments().getString("fecha");
+        String titulo = getArguments().getString("titulo");
         ((TextView) v.findViewById(R.id.eventoFecha)).setText(fecha);
         ((TextView) v.findViewById(R.id.eventoTitulo)).setText(titulo);
-//        ((TextView) v.findViewById(R.id.eventoDetalle)).setText(detalle);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-        v.setBackground(new BitmapDrawable(getBitmapFromURL(getArguments().getString("imagen"))));
+        ((ImageView) v.findViewById(R.id.eventoImagen)).setImageBitmap(Util.findOrCreateBy(getArguments().getString("imagen")));
         return v;
     }
 
-    public Bitmap getBitmapFromURL(String imageUrl) {
-        try {
-            URL url = new URL(imageUrl);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoInput(true);
-            connection.connect();
-            InputStream input = connection.getInputStream();
-            Bitmap myBitmap = BitmapFactory.decodeStream(input);
-            return myBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+    @Override
+    public void onClick(View view) {
+        Intent i = new Intent(this.getActivity(), Evento.class);
+        i.putExtra("img", getArguments().getString("imagen"));
+        i.putExtra("titulo", getArguments().getString("titulo"));
+        i.putExtra("fecha", getArguments().getString("fecha"));
+        i.putExtra("detalle", getArguments().getString("detalle"));
+        i.putExtra("telefono", getArguments().getString("telefono"));
+        i.putExtra("email", getArguments().getString("email"));
+        this.getActivity().startActivity(i);
     }
-
 }
