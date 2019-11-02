@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
-            android:text="Dashboard"
+            android:text="Barrio Abajo"
             android:textColor="#5E5E5E"
             android:textSize="24dp" />
 
@@ -33,10 +33,10 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
-        android:text="this vacation time for you discription."
+        android:text="Informacion turistica de"
         android:textColor="#5E5E5E"
         android:textSize="18dp" />
 
@@ -50,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg"
+
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -274,25 +275,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:layout_marginTop="14dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/roboto_medium"
-            android:text="start new vacation"
-            android:textColor="#5E5E5E"
-            android:textSize="18dp" />
-
         <View
-            android:layout_width="match_parent"
+            android:onClick="open"
+            android:layout_width="160dp"
             android:layout_height="2dp"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
             android:background="#7a8b8b8b"></View>
+
+        <TextView
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text=" Ver todos los eventos >"
+            android:textAlignment="textEnd"
+            android:textColor="#5E5E5E"
+            android:textSize="18dp" />
+
+
 
     </LinearLayout>
 
