@@ -27,7 +27,7 @@ public class Museo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_museo);
         this.tts = new TextToSpeech(this, null);
-        tts.setLanguage(Locale.getDefault());
+        tts.setLanguage(Locale.forLanguageTag("es-ES"));
         Intent extras = this.getIntent();
         this.detalle = extras.getStringExtra("detalle");
         String img = extras.getStringExtra("img");
