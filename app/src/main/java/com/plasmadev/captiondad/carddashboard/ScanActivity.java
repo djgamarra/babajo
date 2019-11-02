@@ -3,7 +3,6 @@ package com.plasmadev.captiondad.carddashboard;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.zxing.Result;
