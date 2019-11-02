@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Historia">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
+        android:layout_height="30dp">
+
+    </TextView>
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="379dp"
+        android:layout_width="match_parent"
         android:layout_height="65dp"
-
-        android:text="  Historia de Barrio Abajo"
+        android:text="Historia de Barrio Abajo"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
@@ -32,7 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <android.support.v7.widget.CardView
 
             android:layout_width="291dp"
@@ -40,9 +41,9 @@
 
             android:layout_marginTop="0dp"
             android:layout_weight="1"
-            android:backgroundTint="#8c7ae6"
+            android:backgroundTint="#EA2027"
             app:cardCornerRadius="40dp"
-            app:cardElevation="2dp" >
+            app:cardElevation="2dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -62,7 +63,6 @@
                     android:layout_marginTop="21dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="45dp"
-                    android:background="#8c7ae6"
                     android:padding="8dp">
 
                     <TextView
@@ -74,7 +74,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="205dp"
+                        android:layout_marginStart="190dp"
                         android:layout_marginTop="275dp"
                         android:layout_marginEnd="26dp"
                         android:layout_marginBottom="226dp"
@@ -90,20 +90,19 @@
                         android:layout_marginBottom="8dp"
                         android:orientation="horizontal">
 
-                        <android.support.v7.widget.CardView
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             card_view:cardCornerRadius="30dp"
-                            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                            android:layout_width="match_parent"
-                            card_view:cardPreventCornerOverlap="false"
-                            android:layout_height="wrap_content">
+                            card_view:cardPreventCornerOverlap="false">
 
-                        <ImageView
+                            <ImageView
                                 android:id="@+id/imageView3"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/carnaval" />
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/carnaval" />
                         </android.support.v7.widget.CardView>
 
 
@@ -142,7 +141,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="216dp"
+                        android:layout_marginStart="190dp"
                         android:layout_marginTop="109dp"
                         android:layout_marginEnd="29dp"
                         android:layout_marginBottom="417dp"
@@ -160,7 +159,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="210dp"
+                        android:layout_marginStart="190dp"
                         android:layout_marginTop="355dp"
                         android:layout_marginEnd="34dp"
                         android:layout_marginBottom="164dp"
@@ -177,7 +176,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:layout_marginStart="211dp"
+                        android:layout_marginStart="190dp"
                         android:layout_marginTop="24dp"
                         android:layout_marginEnd="21dp"
                         android:layout_marginBottom="476dp"
