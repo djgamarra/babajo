@@ -392,6 +392,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
+                    android:onClick="open_historia"
                     android:backgroundTint="#EA2027"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
@@ -426,6 +427,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:onClick="open_qr"
 
                     android:backgroundTint="#ffd32a"
                     android:layout_width="160dp"

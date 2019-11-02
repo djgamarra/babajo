@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.plasmadev.captiondad.carddashboard">
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,8 +17,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Eventos"></activity>
+        <activity android:name=".Historia"></activity>
+        <activity android:name=".ScanActivity" />
 
+        <meta-data
+            android:name="com.google.android.gms.Vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity android:name=".Eventos" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -32,7 +39,7 @@
 
         <activity
             android:name=".Lugares"
-            android:label="@string/title_activity_lugares"></activity>
+            android:label="@string/title_activity_lugares" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".SplashScreen">

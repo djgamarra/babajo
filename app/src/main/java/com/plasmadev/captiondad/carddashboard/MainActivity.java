@@ -18,9 +18,21 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(i);
     }
 
-    public void open_lugares(View v) {
-        Intent i = new Intent(this, Eventos.class);
-        this.startActivity(i);
-    }
+    public void open_lugares(View v){
+    Intent i = new Intent( this, Lugares.class);
+    this.startActivity(i);
+}
+      public void open_qr(View v){
 
+    Intent i = new Intent( this, ScanActivity.class);
+    this.startActivity(i);
+
+}
+    public void open_historia(View v){
+
+        Intent i = new Intent( this, Historia.class);
+
+        this.startActivity(i);
+
+    }
 }

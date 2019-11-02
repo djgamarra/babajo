@@ -52,6 +52,13 @@ public class Lugares extends FragmentActivity implements OnMapReadyCallback {
         LatLng carnaval = new LatLng(10.988378, -74.778882);
         mMap.addMarker(new MarkerOptions().position(carnaval).title("Aduana"));
 
+        LatLng tienda = new LatLng(10.991901, -74.786241);
+        mMap.addMarker(new MarkerOptions().position(tienda).title("Billares el callejon"));
 
+        LatLng tienda2 = new LatLng(10.992447, -74.784913);
+        mMap.addMarker(new MarkerOptions().position(tienda2).title("Fritos Barrio Abajo"));
+
+        LatLng tienda3 = new LatLng(10.993283, -74.786811);
+        mMap.addMarker(new MarkerOptions().position(tienda3).title("Donde Eddier`Sabor "));
     }
 }
