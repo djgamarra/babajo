@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Evento"></activity>
+        <activity android:name=".Museo"></activity>
         <activity android:name=".Historia" />
         <activity android:name=".ScanActivity" />
         <activity android:name=".Eventos" />
