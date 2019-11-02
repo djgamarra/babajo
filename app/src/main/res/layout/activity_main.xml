@@ -2,521 +2,540 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    style="@style/AppTheme"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Barrio Abajo"
-            android:textColor="#5E5E5E"
-            android:textSize="24dp" />
-
-        <View
-            android:layout_width="40dp"
-            android:layout_height="6dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:background="@drawable/bg_view">
-
-        </View>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="323dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:text="Informacion turistica de Barrio Abajo"
-        android:textColor="#5E5E5E"
-        android:textSize="18dp" />
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp">
+        android:layout_margin="10dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg"
+            android:orientation="horizontal">
 
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:fontFamily="@font/roboto_bold"
+                android:text="Barrio Abajo"
+                android:textColor="#5E5E5E"
+                android:textSize="24dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_mediumitalic"
-                    android:text="Good Mrning"
-                    android:textColor="#ffff"
-                    android:textSize="18dp" />
+            <View
+                android:layout_width="40dp"
+                android:layout_height="6dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_view">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="28dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/cloud" />
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Android Developer"
-                    android:textColor="#ffff"
-                    android:textSize="24dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="21 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Sun"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Mon"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tue"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Wed"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Thu"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fri"
-                        android:textColor="#ffff" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="20 C"
-                        android:textColor="#ffff"
-                        android:textSize="18dp" />
-
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
+            </View>
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="22dp"
-        android:layout_marginTop="14dp"
-        android:orientation="horizontal">
-
-        <View
-            android:onClick="open"
-            android:layout_width="160dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:background="#7a8b8b8b"></View>
-
         <TextView
-            android:layout_width="203dp"
+            android:layout_width="323dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:text=" Ver todos los eventos >"
-            android:textAlignment="textEnd"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Informacion turistica de Barrio Abajo"
             android:textColor="#5E5E5E"
             android:textSize="18dp" />
 
-
-
     </LinearLayout>
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg"
+
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_mediumitalic"
+                            android:text="Good Mrning"
+                            android:textColor="#ffff"
+                            android:textSize="18dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/cloud" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Android Developer"
+                            android:textColor="#ffff"
+                            android:textSize="24dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="21 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sun"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mon"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tue"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wed"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Thu"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fri"
+                                android:textColor="#ffff" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="20 C"
+                                android:textColor="#ffff"
+                                android:textSize="18dp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="160dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:background="#7a8b8b8b"
+                    android:onClick="open"></View>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="203dp"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Lugares "
+                    android:fontFamily="@font/roboto_medium"
+                    android:text=" Ver todos los eventos >"
+                    android:textAlignment="textEnd"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/walking" />
 
-            </RelativeLayout>
+            </LinearLayout>
 
-        </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_marginLeft="18dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Foro"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/cycling" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Lugares "
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
 
-        </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/walking" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Foro"
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/cycling" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
 
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Historia"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/convertible" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Historia"
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
 
-        </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/convertible" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_marginLeft="18dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+                    </RelativeLayout>
 
-            <RelativeLayout
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Escanear QR"
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/steam_engine" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Escanear QR"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/steam_engine" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-            </RelativeLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text=""
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
 
-        </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/climbing" />
 
+                    </RelativeLayout>
 
-    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal">
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="Flight"
+                            android:textColor="#5E5E5E"
+                            android:textSize="18dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text=""
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:src="@drawable/airport" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/climbing" />
+                    </RelativeLayout>
 
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:layout_marginLeft="18dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="2dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_bold"
-                    android:text="Flight"
-                    android:textColor="#5E5E5E"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:src="@drawable/airport" />
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
 
-    </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
