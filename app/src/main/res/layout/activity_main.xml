@@ -78,7 +78,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Good Morning"
+                            android:text="<Eventos recientes>"
                             android:textColor="#ffff"
                             android:textSize="18dp" />
 
@@ -143,13 +143,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sun"
+                                android:text="Lun"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="11"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
@@ -166,13 +166,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Mon"
+                                android:text="Mar º"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="12"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
@@ -189,13 +189,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Tue"
+                                android:text="Mie º"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="13"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
@@ -212,13 +212,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Wed"
+                                android:text="Juev"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="14"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
@@ -235,13 +235,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Thu"
+                                android:text="Vier º"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="15"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
@@ -258,13 +258,13 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Fri"
+                                android:text="Sab"
                                 android:textColor="#ffff" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="20 C"
+                                android:text="16"
                                 android:textColor="#ffff"
                                 android:textSize="18dp" />
 
