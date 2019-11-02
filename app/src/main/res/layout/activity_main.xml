@@ -23,7 +23,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Barrio Abajo"
-                android:textColor="#5E5E5E"
+
+                android:textColor="@color/black"
                 android:textSize="24dp" />
 
             <View
@@ -313,6 +314,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.CardView
+                    android:onClick="open_lugares"
                     android:backgroundTint="#009432"
                     android:layout_width="160dp"
                     android:layout_height="120dp"
@@ -324,21 +326,23 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:padding="8dp">
+                        android:padding="11dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Lugares"
                             android:textColor="#fff"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/walking" />
+                            android:layout_marginRight="13dp"
+                            android:layout_marginBottom="-4dp"
+                            android:src="@drawable/map" />
 
                     </RelativeLayout>
 
@@ -363,14 +367,16 @@
                             android:layout_height="wrap_content"
                             android:text="Foro"
                             android:textColor="#FFFFFF"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/cycling" />
+                            android:layout_marginRight="14dp"
+                            android:layout_marginBottom="-5dp"
+                            android:src="@drawable/megafono" />
 
                     </RelativeLayout>
 
@@ -404,14 +410,16 @@
                             android:layout_height="wrap_content"
                             android:text="Historia"
                             android:textColor="#ffffff"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/convertible" />
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="6dp"
+                            android:src="@drawable/monumento" />
 
                     </RelativeLayout>
 
@@ -437,14 +445,16 @@
                             android:layout_height="wrap_content"
                             android:text="Escanear QR"
                             android:textColor="#ffffff"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentBottom="true"
-                            android:src="@drawable/steam_engine" />
+                            android:layout_marginRight="17dp"
+                            android:layout_marginBottom="2dp"
+                            android:src="@drawable/qr" />
 
                     </RelativeLayout>
 
@@ -479,7 +489,7 @@
                             android:layout_height="wrap_content"
                             android:text="Folclor"
                             android:textColor="#ffffff"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -511,7 +521,7 @@
                             android:layout_height="wrap_content"
                             android:text="Ayuda"
                             android:textColor="#ffffff"
-                            android:textSize="18dp" />
+                            android:textSize="20dp" />
 
                         <ImageView
                             android:layout_width="wrap_content"
