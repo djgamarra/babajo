@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     Intent i = new Intent( this, Lugares.class);
     this.startActivity(i);
 }
-
       public void open_qr(View v){
 
     Intent i = new Intent( this, ScanActivity.class);

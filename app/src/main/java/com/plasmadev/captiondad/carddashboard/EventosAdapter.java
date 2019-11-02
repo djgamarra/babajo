@@ -2,22 +2,27 @@ package com.plasmadev.captiondad.carddashboard;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import java.util.List;
 
 public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosViewHolder> {
-    private QuerySnapshot r;
+    private List<DocumentSnapshot> r;
 
-    public EventosAdapter(QuerySnapshot r) {
+    public EventosAdapter(List<DocumentSnapshot> r) {
         this.r = r;
     }
 
     @NonNull
     @Override
-    public EventosViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+    public EventosAdapter.EventosViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.evento, parent, false);
+        return new EventosViewHolder(v, this.r.get(i));
     }
 
     @Override
@@ -27,12 +32,22 @@ public class EventosAdapter extends RecyclerView.Adapter<EventosAdapter.EventosV
 
     @Override
     public int getItemCount() {
-        return 0;
+        return this.r.size();
     }
 
     public static class EventosViewHolder extends RecyclerView.ViewHolder {
-        public EventosViewHolder(@NonNull View v) {
+        TextView eventoTitulo, eventoFecha;
+
+        public EventosViewHolder(@NonNull View v, DocumentSnapshot d) {
             super(v);
+            this.eventoTitulo = v.findViewById(R.id.eventoTitulo);
+            this.eventoFecha = v.findViewById(R.id.eventoFecha);
+            this.setData(d);
+        }
+
+        public void setData(DocumentSnapshot d) {
+            this.eventoTitulo.setText(d.getString("nombre"));
+            this.eventoFecha.setText(d.getString("fecha"));
         }
     }
 }
