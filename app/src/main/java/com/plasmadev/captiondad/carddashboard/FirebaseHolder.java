@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -20,6 +21,10 @@ public class FirebaseHolder {
     public static FirebaseFirestore getInstance() {
         return FirebaseFirestore.getInstance();
     }
+
+    public static FirebaseAuth getAuthInstance() { return FirebaseAuth.getInstance(); }
+
+    public static boolean isAuth() { return getAuthInstance().getCurrentUser() != null; }
 
     public static void init(final SplashScreen notif) {
         getInstance().collection("eventos").orderBy("fecha").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
