@@ -81,7 +81,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:padding="12dp"
-                        android:src="@drawable/bacanoicon" />
+                        android:src="@drawable/bacanofilled" />
 
                     <TextView
                         android:id="@+id/bacanos"

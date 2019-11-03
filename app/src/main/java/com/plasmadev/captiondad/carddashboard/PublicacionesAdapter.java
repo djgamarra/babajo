@@ -77,7 +77,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                     b.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanoiconfilled));
+                            b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
                         }
                     });
                 }
