@@ -74,6 +74,7 @@
                             android:id="@+id/email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
                             android:textSize="20dp" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -91,6 +92,7 @@
                             android:id="@+id/password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:inputType="textPassword"
                             android:textSize="20dp" />
                     </android.support.design.widget.TextInputLayout>
 
