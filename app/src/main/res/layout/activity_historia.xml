@@ -40,7 +40,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="-40dp"
             android:layout_weight="1"
-            android:backgroundTint="#8c7ae6"
+            android:backgroundTint="@color/indigo"
             android:paddingBottom="40dp"
             app:cardCornerRadius="40dp"
             app:cardElevation="2dp">
@@ -58,7 +58,6 @@
                         android:layout_width="290dp"
                         android:layout_height="762dp"
                         android:layout_marginTop="20dp"
-                        android:background="#8c7ae6"
                         android:orientation="vertical"
                         android:padding="8dp"
                         android:paddingTop="40dp"
@@ -68,13 +67,11 @@
 
                         <View
                             android:id="@+id/view2"
-
                             android:layout_width="43dp"
                             android:layout_height="05dp"
                             android:layout_gravity="center"
                             android:layout_marginLeft="8dp"
-
-                            android:background="#ffffff">
+                            android:background="@color/yellow">
 
                         </View>
 

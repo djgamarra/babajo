@@ -12,43 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/circular_std_medium"
-                android:text="Bajo e' la bonga"
-                android:textColor="@color/black"
-                android:textSize="28dp" />
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="6dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/bg_view">
-
-            </View>
-
-        </LinearLayout>
+            android:layout_height="50dp"
+            android:src="@drawable/logo" />
 
         <TextView
-            android:layout_width="323dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="Conociendo la cultura local"
-            android:textColor="#5E5E5E"
-            android:textSize="18dp" />
+            android:fontFamily="@font/circular_std_black"
+            android:text="Bajo e' la bonga"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28dp" />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="#7a8b8b8b" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -135,7 +122,7 @@
                         android:layout_height="120dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#3c40c6"
+                        android:backgroundTint="#F6A132"
                         android:onClick="open_login"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -180,7 +167,7 @@
                         android:layout_height="120dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#8c7ae6"
+                        android:backgroundTint="@color/indigo"
                         android:onClick="open_historia"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
@@ -261,7 +248,7 @@
                         android:layout_height="120dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#fa8231"
+                        android:backgroundTint="#8c7ae6"
                         android:onClick="open"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
