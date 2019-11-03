@@ -1,7 +1,6 @@
 package com.plasmadev.captiondad.carddashboard;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import java.util.List;
 
 public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdapter.PublicacionesViewHolder> {
-    private static int[] colors = new int[4];
     private List<DocumentSnapshot> r;
     private Context context;
 
@@ -26,7 +24,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
     @NonNull
     @Override
     public PublicacionesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View v = LayoutInflater.from(this.context).inflate(R.layout.evento, parent, false);
+        View v = LayoutInflater.from(this.context).inflate(R.layout.publicacion, parent, false);
         return new PublicacionesViewHolder(v, null, this.context);
     }
 
@@ -52,7 +50,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
 //            this.eventoFecha = v.findViewById(R.id.eventoFecha);
 //            v.findViewById(R.id.eventoCard).setOnClickListener(this);
 //            this.setData(d);
-            
+
         }
 
         public void setData(DocumentSnapshot d) {
