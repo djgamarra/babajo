@@ -52,7 +52,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             this.detalle = v.findViewById(R.id.feedTextWall);
             this.autor = v.findViewById(R.id.feedUsername);
             this.imagen = v.findViewById(R.id.feedImage);
-            this.icon = v.findViewById(R.feedUserIcon);
+            this.icon = v.findViewById(R.id.feedUserIcon);
             v.findViewById(R.id.eventoCard).setOnClickListener(this);
             this.setData(d);
         }
