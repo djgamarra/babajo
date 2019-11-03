@@ -57,23 +57,23 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="22dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:layout_marginTop="14dp"-->
+<!--                    android:layout_marginBottom="20dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="8dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:background="#7a8b8b8b" />
+<!--                    <View-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="2dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_margin="8dp"-->
+<!--                        android:layout_marginTop="0dp"-->
+<!--                        android:layout_marginBottom="0dp"-->
+<!--                        android:background="#7a8b8b8b" />-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -248,7 +248,7 @@
                         android:layout_height="120dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:backgroundTint="#8c7ae6"
+                        android:backgroundTint="#17c0eb"
                         android:onClick="open"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
