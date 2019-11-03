@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -39,25 +40,30 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
     }
 
     public static class PublicacionesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView eventoTitulo, eventoFecha;
+        private TextView titulo, detalle, autor;
+        private ImageView imagen, icon;
         private DocumentSnapshot doc;
         private Context context;
 
         public PublicacionesViewHolder(@NonNull View v, DocumentSnapshot d, Context context) {
             super(v);
             this.context = context;
-//            this.eventoTitulo = v.findViewById(R.id.eventoTitulo);
-//            this.eventoFecha = v.findViewById(R.id.eventoFecha);
-//            v.findViewById(R.id.eventoCard).setOnClickListener(this);
-//            this.setData(d);
-
+            this.titulo = v.findViewById(R.id.feedTitle);
+            this.detalle = v.findViewById(R.id.feedTextWall);
+            this.autor = v.findViewById(R.id.feedUsername);
+            this.imagen = v.findViewById(R.id.feedImage);
+            this.icon = v.findViewById(R.feedUserIcon);
+            v.findViewById(R.id.eventoCard).setOnClickListener(this);
+            this.setData(d);
         }
 
         public void setData(DocumentSnapshot d) {
-//            this.doc = d;
-//            this.eventoTitulo.setText(this.doc.getString("nombre"));
-//            this.eventoFecha.setText(this.doc.getString("fecha"));
-//            this.eventoFecha.setTextColor(colors[(int) (Math.random() * colors.length)]);
+            this.doc = d;
+            this.titulo.setText(doc.getString("nombre"));
+            this.detalle.setText(doc.getString("detalle"));
+            this.autor.setText(doc.getString("autor"));
+            this.imagen.setImageBitmap(Util.findOrCreateBy(doc.getString("imagen")));
+            this.icon.setImageBitmap(Util.findOrCreateBy(doc.getString("icono")));
         }
 
         @Override
