@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/circular_std_black"
-            android:text="Bajo e' la bonga"
+            android:text="Bajo la bonga"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="28dp" />
