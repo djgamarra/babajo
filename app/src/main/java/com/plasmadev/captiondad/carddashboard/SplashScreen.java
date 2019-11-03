@@ -20,7 +20,7 @@ public class SplashScreen extends AppCompatActivity {
 
     public void continuar() {
         final SplashScreen context = this;
-        final int duration = 100;
+        final int duration = 300;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -32,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
                     public void run() {
                         context.finish();
                     }
-                }, duration + 200);
+                }, duration + 500);
             }
         }, duration);
     }

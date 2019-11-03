@@ -22,10 +22,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/circular_std_medium"
                 android:text="Bajo e' la bonga"
                 android:textColor="@color/black"
-                android:textSize="24dp" />
+                android:textSize="28dp" />
 
             <View
                 android:layout_width="40dp"
@@ -41,6 +43,7 @@
         <TextView
             android:layout_width="323dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="Conociendo la cultura local"
             android:textColor="#5E5E5E"
             android:textSize="18dp" />
@@ -127,10 +130,10 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="160dp"
                         android:layout_height="120dp"
-                        android:onClick="open_login"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:backgroundTint="#3c40c6"
+                        android:onClick="open_login"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
 
