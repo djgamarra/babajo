@@ -15,10 +15,11 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.List;
 
 public class FirebaseHolder {
-    private static final int MODULES = 3;
-    public static List<DocumentSnapshot> eventos = null;
-    public static List<DocumentSnapshot> historias = null;
+    private static final int MODULES = 4;
     public static List<DocumentSnapshot> qrs = null;
+    public static List<DocumentSnapshot> eventos = null;
+    public static List<DocumentSnapshot> publish = null;
+    public static List<DocumentSnapshot> historias = null;
     private static int loaded = 0;
     @Nullable
     private static FirebaseUser currentUser;
@@ -63,6 +64,16 @@ public class FirebaseHolder {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     qrs = task.getResult().getDocuments();
+                    loaded++;
+                }
+                if (loaded == MODULES) notif.continuar();
+            }
+        });
+        getInstance().collection("publicaciones").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    publish = task.getResult().getDocuments();
                     loaded++;
                 }
                 if (loaded == MODULES) notif.continuar();
