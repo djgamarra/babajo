@@ -82,7 +82,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                             if (bac) {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanofilled));
                                 Map<String, Object> data = d.getData();
-                                int nb = Integer.parseInt(d.get("bacanos").toString()) - 1;
+                                int nb = Integer.parseInt(d.get("bacanos").toString());
                                 data.put("bacanos", nb);
                                 d.getReference().set(data);
                                 bac = false;
