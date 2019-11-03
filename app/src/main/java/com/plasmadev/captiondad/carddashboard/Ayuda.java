@@ -2,8 +2,8 @@ package com.plasmadev.captiondad.carddashboard;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class Ayuda extends AppCompatActivity {

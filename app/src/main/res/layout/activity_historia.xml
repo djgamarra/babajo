@@ -7,9 +7,9 @@
     android:orientation="vertical"
     tools:context=".Historia">
 
-    <TextView
+    <View
         android:layout_width="match_parent"
-        android:layout_height="30dp"></TextView>
+        android:layout_height="30dp" />
 
     <TextView
         android:id="@+id/textView3"
