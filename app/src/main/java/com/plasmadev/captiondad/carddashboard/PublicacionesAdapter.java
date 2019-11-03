@@ -35,7 +35,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
 
     @Override
     public int getItemCount() {
-        return 3;
+        return this.r.size();
     }
 
     public static class PublicacionesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
