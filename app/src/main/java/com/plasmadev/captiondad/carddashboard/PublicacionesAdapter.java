@@ -67,7 +67,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             this.titulo.setText(doc.getString("nombre"));
             this.detalle.setText(doc.getString("detalle"));
             this.autor.setText(doc.getString("autor"));
-            int bacanos = Integer.parseInt(doc.get("bacanosTxt").toString());
+            int bacanos = Integer.parseInt(doc.get("bacanos").toString());
             if (bacanos <= 0) this.bacanosTxt.setText("");
             else this.bacanosTxt.setText(bacanos + " personas, qué bacanería!");
             this.imagen.setImageBitmap(Util.findOrCreateBy(doc.getString("imagen")));
@@ -82,8 +82,8 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                             if (bac) {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanofilled));
                                 Map<String, Object> data = d.getData();
-                                int nb = Integer.parseInt(d.get("bacanosTxt").toString()) - 1;
-                                data.put("bacanosTxt", nb);
+                                int nb = Integer.parseInt(d.get("bacanos").toString()) - 1;
+                                data.put("bacanos", nb);
                                 d.getReference().set(data);
                                 bac = false;
                                 if (nb <= 0) bacanosTxt.setText("");
@@ -91,8 +91,8 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                             } else {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
                                 Map<String, Object> data = d.getData();
-                                int nb = Integer.parseInt(d.get("bacanosTxt").toString()) + 1;
-                                data.put("bacanosTxt", nb);
+                                int nb = Integer.parseInt(d.get("bacanos").toString()) + 1;
+                                data.put("bacanos", nb);
                                 d.getReference().set(data);
                                 bac = true;
                                 if (nb <= 0) bacanosTxt.setText("");
