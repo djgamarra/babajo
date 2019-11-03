@@ -42,6 +42,7 @@ public class Login extends AppCompatActivity implements FirebaseHolder.AuthListe
     protected void onResume() {
         super.onResume();
         FirebaseHolder.subscribe(this);
+        if (FirebaseHolder.isAuth()) finish();
     }
 
     @Override

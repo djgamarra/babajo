@@ -95,7 +95,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                                 d.getReference().set(data);
                                 bac = false;
                                 if (nb <= 0) bacanosTxt.setText("");
-                                else bacanosTxt.setText(nb + " personas, qué bacanería!");
+                                else bacanosTxt.setText(nb + " personas, ¡qué bacanería!");
                             } else {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
                                 Map<String, Object> data = d.getData();
@@ -104,7 +104,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                                 d.getReference().set(data);
                                 bac = true;
                                 if (nb <= 0) bacanosTxt.setText("");
-                                else bacanosTxt.setText(nb + " personas, qué bacanería!");
+                                else bacanosTxt.setText(nb + " personas, ¡qué bacanería!");
                             }
                         }
                     });

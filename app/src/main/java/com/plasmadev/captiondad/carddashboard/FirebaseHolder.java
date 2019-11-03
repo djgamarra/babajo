@@ -101,7 +101,7 @@ public class FirebaseHolder {
         });
     }
 
-    public static void signup(String email, String password) {
+    public static void signup(final String email, final String password) {
         getAuthInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -109,8 +109,13 @@ public class FirebaseHolder {
                     currentUser = task.getResult().getUser();
                 else currentUser = null;
                 if (authListener != null) authListener.onChange(currentUser);
+                getAuthInstance().signInWithEmailAndPassword(email, password);
             }
         });
+    }
+
+    public static void logout() {
+        getAuthInstance().signOut();
     }
 
     public interface AuthListener {
