@@ -82,6 +82,8 @@
                         android:layout_height="2dp"
                         android:layout_gravity="center"
                         android:layout_margin="8dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
                         android:background="#7a8b8b8b" />
 
                 </LinearLayout>
