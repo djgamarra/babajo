@@ -5,16 +5,24 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ViewPager mPager;
+    private PagerAdapter pagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mPager = findViewById(R.id.pager);
+        pagerAdapter = new EventAdapter(getSupportFragmentManager(), FirebaseHolder.eventos);
+        mPager.setAdapter(pagerAdapter);
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 0);
     }
 
