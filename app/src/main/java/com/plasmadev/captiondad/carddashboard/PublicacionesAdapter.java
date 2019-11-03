@@ -71,7 +71,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             this.autor.setText(doc.getString("autor"));
             int bacanos = Integer.parseInt(doc.get("bacanos").toString());
             if (bacanos <= 0) this.bacanosTxt.setText("");
-            else this.bacanosTxt.setText(bacanos + " personas, qué bacanería!");
+            else this.bacanosTxt.setText(bacanos + " personas, ¡qué bacanería!");
             this.imagen.setImageBitmap(Util.findOrCreateBy(doc.getString("imagen")));
             this.icon.setImageBitmap(Util.findOrCreateBy(doc.getString("icono")));
             final ImageView b = this.bacano;
