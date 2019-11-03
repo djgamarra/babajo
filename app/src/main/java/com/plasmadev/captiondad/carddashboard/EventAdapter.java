@@ -34,6 +34,6 @@ public class EventAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return this.data.size();
+        return Math.min(this.data.size(), 5);
     }
 }

@@ -35,10 +35,10 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Barrio Abajo"
+            android:text="Bajo e' la bonga"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="55sp" />
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/textView2"

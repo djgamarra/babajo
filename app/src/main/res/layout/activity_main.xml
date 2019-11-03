@@ -254,13 +254,13 @@
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:onClick="open"
+                        android:backgroundTint="#fa8231"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="2dp">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/morado_grad"
                             android:padding="8dp">
 
                             <TextView
