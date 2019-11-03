@@ -42,7 +42,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
     }
 
     public static class PublicacionesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView titulo, detalle, autor, bacanos;
+        private TextView titulo, detalle, autor, bacanosTxt;
         private ImageView imagen, icon, bacano;
         private DocumentSnapshot doc;
         private Context context;
@@ -52,7 +52,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             super(v);
             this.context = context;
             this.titulo = v.findViewById(R.id.feedTitle);
-            this.bacanos = v.findViewById(R.id.bacanos);
+            this.bacanosTxt = v.findViewById(R.id.bacanos);
             this.bacano = v.findViewById(R.id.bacano);
             this.detalle = v.findViewById(R.id.feedTextWall);
             this.autor = v.findViewById(R.id.feedUsername);
@@ -67,9 +67,9 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             this.titulo.setText(doc.getString("nombre"));
             this.detalle.setText(doc.getString("detalle"));
             this.autor.setText(doc.getString("autor"));
-            int bacanos = Integer.parseInt(doc.get("bacanos").toString());
-            if (bacanos <= 0) this.bacanos.setText("");
-            else this.bacanos.setText(bacanos + " personas, qué bacanería!");
+            int bacanos = Integer.parseInt(doc.get("bacanosTxt").toString());
+            if (bacanos <= 0) this.bacanosTxt.setText("");
+            else this.bacanosTxt.setText(bacanos + " personas, qué bacanería!");
             this.imagen.setImageBitmap(Util.findOrCreateBy(doc.getString("imagen")));
             this.icon.setImageBitmap(Util.findOrCreateBy(doc.getString("icono")));
             final ImageView b = this.bacano;
@@ -82,15 +82,21 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                             if (bac) {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanofilled));
                                 Map<String, Object> data = d.getData();
-                                data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) - 1);
+                                int nb = Integer.parseInt(d.get("bacanosTxt").toString()) - 1;
+                                data.put("bacanosTxt", nb);
                                 d.getReference().set(data);
                                 bac = false;
+                                if (nb <= 0) bacanosTxt.setText("");
+                                else bacanosTxt.setText(nb + " personas, qué bacanería!");
                             } else {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
                                 Map<String, Object> data = d.getData();
-                                data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) + 1);
+                                int nb = Integer.parseInt(d.get("bacanosTxt").toString()) + 1;
+                                data.put("bacanosTxt", nb);
                                 d.getReference().set(data);
                                 bac = true;
+                                if (nb <= 0) bacanosTxt.setText("");
+                                else bacanosTxt.setText(nb + " personas, qué bacanería!");
                             }
                         }
                     });
