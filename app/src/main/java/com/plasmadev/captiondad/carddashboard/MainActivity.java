@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void open_login(View v) {
-        Intent i = new Intent(this, Login.class);
+        Intent i = new Intent(this, Wall.class);
         this.startActivity(i);
     }
 

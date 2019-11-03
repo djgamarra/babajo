@@ -27,17 +27,17 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
     @Override
     public PublicacionesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View v = LayoutInflater.from(this.context).inflate(R.layout.evento, parent, false);
-        return new PublicacionesViewHolder(v, this.r.get(i), this.context);
+        return new PublicacionesViewHolder(v, null, this.context);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PublicacionesViewHolder publicacionesViewHolder, int i) {
-        publicacionesViewHolder.setData(this.r.get(i));
+        publicacionesViewHolder.setData(null);
     }
 
     @Override
     public int getItemCount() {
-        return this.r.size();
+        return 3;
     }
 
     public static class PublicacionesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -48,29 +48,30 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
         public PublicacionesViewHolder(@NonNull View v, DocumentSnapshot d, Context context) {
             super(v);
             this.context = context;
-            this.eventoTitulo = v.findViewById(R.id.eventoTitulo);
-            this.eventoFecha = v.findViewById(R.id.eventoFecha);
-            v.findViewById(R.id.eventoCard).setOnClickListener(this);
-            this.setData(d);
+//            this.eventoTitulo = v.findViewById(R.id.eventoTitulo);
+//            this.eventoFecha = v.findViewById(R.id.eventoFecha);
+//            v.findViewById(R.id.eventoCard).setOnClickListener(this);
+//            this.setData(d);
+            
         }
 
         public void setData(DocumentSnapshot d) {
-            this.doc = d;
-            this.eventoTitulo.setText(this.doc.getString("nombre"));
-            this.eventoFecha.setText(this.doc.getString("fecha"));
-            this.eventoFecha.setTextColor(colors[(int) (Math.random() * colors.length)]);
+//            this.doc = d;
+//            this.eventoTitulo.setText(this.doc.getString("nombre"));
+//            this.eventoFecha.setText(this.doc.getString("fecha"));
+//            this.eventoFecha.setTextColor(colors[(int) (Math.random() * colors.length)]);
         }
 
         @Override
         public void onClick(View view) {
-            Intent i = new Intent(this.context, Evento.class);
-            i.putExtra("img", doc.getString("imagen"));
-            i.putExtra("titulo", doc.getString("nombre"));
-            i.putExtra("fecha", doc.getString("fecha"));
-            i.putExtra("detalle", doc.getString("detalle"));
-            i.putExtra("telefono", doc.getString("telefono"));
-            i.putExtra("email", doc.getString("email"));
-            this.context.startActivity(i);
+//            Intent i = new Intent(this.context, Evento.class);
+//            i.putExtra("img", doc.getString("imagen"));
+//            i.putExtra("titulo", doc.getString("nombre"));
+//            i.putExtra("fecha", doc.getString("fecha"));
+//            i.putExtra("detalle", doc.getString("detalle"));
+//            i.putExtra("telefono", doc.getString("telefono"));
+//            i.putExtra("email", doc.getString("email"));
+//            this.context.startActivity(i);
         }
     }
 }
