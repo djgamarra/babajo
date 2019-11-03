@@ -9,6 +9,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 public class Lugares extends FragmentActivity implements OnMapReadyCallback {
 
@@ -45,19 +46,28 @@ public class Lugares extends FragmentActivity implements OnMapReadyCallback {
         mMap.setMinZoomPreference(14.5f);
         mMap.setLatLngBoundsForCameraTarget(lim);
 
-        LatLng sydney = new LatLng(10.991047, -74.783465);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Parque "));
+        for (DocumentSnapshot d : FirebaseHolder.places) {
+            mMap.addMarker(
+                    new MarkerOptions().position(
+                            new LatLng(
+                                    Double.parseDouble(d.get("lat").toString()),
+                                    Double.parseDouble(d.get("lng").toString())
+                            )).title(d.getString("nombre")));
+        }
 
-        LatLng carnaval = new LatLng(10.988378, -74.778882);
-        mMap.addMarker(new MarkerOptions().position(carnaval).title("Aduana"));
-
-        LatLng tienda = new LatLng(10.991901, -74.786241);
-        mMap.addMarker(new MarkerOptions().position(tienda).title("Billares el callejon"));
-
-        LatLng tienda2 = new LatLng(10.992447, -74.784913);
-        mMap.addMarker(new MarkerOptions().position(tienda2).title("Fritos Barrio Abajo"));
-
-        LatLng tienda3 = new LatLng(10.993283, -74.786811);
-        mMap.addMarker(new MarkerOptions().position(tienda3).title("Donde Eddier`Sabor "));
+//        LatLng sydney = new LatLng(10.991047, -74.783465);
+//        mMap.addMarker(new MarkerOptions().position(sydney).title("Parque "));
+//
+//        LatLng carnaval = new LatLng(10.988378, -74.778882);
+//        mMap.addMarker(new MarkerOptions().position(carnaval).title("Aduana"));
+//
+//        LatLng tienda = new LatLng(10.991901, -74.786241);
+//        mMap.addMarker(new MarkerOptions().position(tienda).title("Billares el callejon"));
+//
+//        LatLng tienda2 = new LatLng(10.992447, -74.784913);
+//        mMap.addMarker(new MarkerOptions().position(tienda2).title("Fritos Barrio Abajo"));
+//
+//        LatLng tienda3 = new LatLng(10.993283, -74.786811);
+//        mMap.addMarker(new MarkerOptions().position(tienda3).title("Donde Eddier`Sabor "));
     }
 }

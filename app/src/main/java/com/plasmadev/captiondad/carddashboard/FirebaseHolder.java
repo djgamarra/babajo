@@ -20,6 +20,7 @@ public class FirebaseHolder {
     public static List<DocumentSnapshot> eventos = null;
     public static List<DocumentSnapshot> publish = null;
     public static List<DocumentSnapshot> historias = null;
+    public static List<DocumentSnapshot> places = null;
     private static int loaded = 0;
     @Nullable
     private static FirebaseUser currentUser;
@@ -74,6 +75,16 @@ public class FirebaseHolder {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     publish = task.getResult().getDocuments();
+                    loaded++;
+                }
+                if (loaded == MODULES) notif.continuar();
+            }
+        });
+        getInstance().collection("places").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    places = task.getResult().getDocuments();
                     loaded++;
                 }
                 if (loaded == MODULES) notif.continuar();
