@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -85,11 +84,13 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                                 Map<String, Object> data = d.getData();
                                 data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) - 1);
                                 d.getReference().set(data);
+                                bac = false;
                             } else {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
                                 Map<String, Object> data = d.getData();
                                 data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) + 1);
                                 d.getReference().set(data);
+                                bac = true;
                             }
                         }
                     });
