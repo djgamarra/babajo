@@ -20,6 +20,10 @@ public class Login extends AppCompatActivity implements FirebaseHolder.AuthListe
     public void login(View v) {
         String email = ((EditText) this.findViewById(R.id.email)).getText().toString();
         String pass = ((EditText) this.findViewById(R.id.password)).getText().toString();
+        if (email.isEmpty() || pass.isEmpty()) {
+            Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
         FirebaseHolder.login(email, pass);
     }
 

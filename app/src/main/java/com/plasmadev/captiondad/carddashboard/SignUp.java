@@ -17,9 +17,13 @@ public class SignUp extends AppCompatActivity implements FirebaseHolder.AuthList
     }
 
     public void signup(View v) {
-        String email = ((EditText) this.findViewById(R.id.email)).getText().toString();
-        String pass = ((EditText) this.findViewById(R.id.password)).getText().toString();
-        String pass2 = ((EditText) this.findViewById(R.id.password2)).getText().toString();
+        String email = ((EditText)this.findViewById(R.id.email)).getText().toString();
+        String pass = ((EditText)this.findViewById(R.id.password)).getText().toString();
+        String pass2 = ((EditText)this.findViewById(R.id.password2)).getText().toString();
+        if (email.isEmpty() || pass.isEmpty() || pass2.isEmpty()) {
+            Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (!pass.equals(pass2)) {
             Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
             return;
