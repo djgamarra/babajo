@@ -12,7 +12,9 @@ import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdapter.PublicacionesViewHolder> {
     private List<DocumentSnapshot> r;
@@ -45,6 +47,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
         private ImageView imagen, icon, bacano;
         private DocumentSnapshot doc;
         private Context context;
+        private boolean bac = false;
 
         public PublicacionesViewHolder(@NonNull View v, DocumentSnapshot d, Context context) {
             super(v);
@@ -60,7 +63,7 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
             this.setData(d);
         }
 
-        public void setData(DocumentSnapshot d) {
+        public void setData(final DocumentSnapshot d) {
             this.doc = d;
             this.titulo.setText(doc.getString("nombre"));
             this.detalle.setText(doc.getString("detalle"));
@@ -77,7 +80,17 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                     b.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
+                            if (bac) {
+                                b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanofilled));
+                                Map<String, Object> data = d.getData();
+                                data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) - 1);
+                                d.getReference().set(data);
+                            } else {
+                                b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacano));
+                                Map<String, Object> data = d.getData();
+                                data.put("bacanos", Integer.parseInt(d.get("bacanos").toString()) + 1);
+                                d.getReference().set(data);
+                            }
                         }
                     });
                 }
