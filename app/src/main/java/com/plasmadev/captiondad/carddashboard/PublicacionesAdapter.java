@@ -1,6 +1,7 @@
 package com.plasmadev.captiondad.carddashboard;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -79,6 +81,12 @@ public class PublicacionesAdapter extends RecyclerView.Adapter<PublicacionesAdap
                     b.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            if (!FirebaseHolder.isAuth()) {
+                                Intent i = new Intent(context, Login.class);
+                                Toast.makeText(context, "Debe iniciar sesión para realizar esta acción", Toast.LENGTH_LONG).show();
+                                context.startActivity(i);
+                                return;
+                            }
                             if (bac) {
                                 b.setImageBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.bacanofilled));
                                 Map<String, Object> data = d.getData();
