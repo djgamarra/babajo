@@ -127,6 +127,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="160dp"
                         android:layout_height="120dp"
+                        android:onClick="open_login"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
                         android:backgroundTint="#3c40c6"

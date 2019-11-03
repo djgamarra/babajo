@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         this.startActivity(i);
     }
 
+    public void open_login(View v) {
+        Intent i = new Intent(this, Login.class);
+        this.startActivity(i);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 1 && data != null) {
