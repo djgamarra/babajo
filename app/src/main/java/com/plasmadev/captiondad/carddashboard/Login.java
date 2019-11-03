@@ -3,7 +3,6 @@ package com.plasmadev.captiondad.carddashboard;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,9 +42,9 @@ public class Login extends AppCompatActivity implements FirebaseHolder.AuthListe
 
     @Override
     public void onChange(FirebaseUser user) {
-        if (user == null) {
-            Log.d("err", "e");
-        } else {
+        if (user == null)
+            Toast.makeText(this, "Contraseña o usuario equivocado", Toast.LENGTH_LONG).show();
+        else {
             Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
             this.finish();
         }

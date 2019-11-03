@@ -78,8 +78,20 @@ public class FirebaseHolder {
         authListener = null;
     }
 
-    public static void login(String username, String password) {
-        getAuthInstance().signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+    public static void login(String email, String password) {
+        getAuthInstance().signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful() && task.getResult() != null)
+                    currentUser = task.getResult().getUser();
+                else currentUser = null;
+                if (authListener != null) authListener.onChange(currentUser);
+            }
+        });
+    }
+
+    public static void signup(String email, String password) {
+        getAuthInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful() && task.getResult() != null)
